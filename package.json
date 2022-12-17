@@ -1,8 +1,8 @@
 {
-  "name": "hws2",
-  "homepage": "https://MaksimBozhko.github.io/hws2-master",
+  "name": "hws2-master",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://MaksimBozhko.github.io/hws2-master",
   "dependencies": {
     "@emotion/react": "11.10.4",
     "@emotion/styled": "11.10.4",

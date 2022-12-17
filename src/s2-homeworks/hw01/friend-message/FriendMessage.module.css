@@ -8,6 +8,7 @@
 
 .friendImageAndText {
     display: flex;
+
 }
 
 .friendImageAndText img {
@@ -17,19 +18,26 @@
 }
 
 .friendText {
+    position: relative;
+    padding-left: 25px;
+    margin-left: 20px;
     width: 414px;
     height: 60px;
     background: #F5F7FB;
-    box-shadow: 0px 5px 20px rgba(29, 33, 38, 0.03), 0px 1px 2px rgba(29, 33, 38, 0.1);
-    border-radius: 2px;
+    border-radius: 8px;
+    border-bottom-left-radius:  unset;
 }
 
 .friendText:after {
-
+    content:"";
+    position:absolute;
+    z-index:2;
+    border: 9px solid transparent; border-right: 9px solid #F5F7FB; border-bottom: 9px solid #F5F7FB;
+    left: -18px;
+    bottom: 0;
 }
 
 .friendName {
-    padding-left: 25px;
     padding-top: 7px;
     font-weight: 600;
 }
