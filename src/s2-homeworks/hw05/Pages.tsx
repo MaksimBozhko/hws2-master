@@ -15,10 +15,10 @@ function Pages() {
     return (
         <div>
             <Routes>
+                <Route path={PATH.PRE_JUNIOR} element={<PreJunior />}/>
                 <Route path={'/'} element={<PreJunior />}/>
-                <Route path={'/pre-junior'} element={<PreJunior />}/>
-                <Route path={'/junior'} element={<Junior />}/>
-                <Route path={'/junior-plus'} element={<JuniorPlus />}/>
+                <Route path={PATH.JUNIOR} element={<Junior />}/>
+                <Route path={PATH.JUNIOR_PLUS} element={<JuniorPlus />}/>
                 <Route path={'/*'} element={<Error404 />} />
             </Routes>
         </div>
