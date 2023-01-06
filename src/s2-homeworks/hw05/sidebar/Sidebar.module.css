@@ -1,12 +1,17 @@
 .sidebar {
     position: absolute;
+    top: -9999px;
+    left: -9999px;
+
+}
+
+.sidebar.open {
+    top: 0;
+    left: 0;
     width: 317px;
     background-color: #fff;
     height: 100%;
     z-index: 1000;
-}
-
-.sidebar.open {
 }
 
 .background {
