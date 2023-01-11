@@ -1,5 +1,9 @@
 .buttonsContainer {
 }
+[id='hw6-restore'] {
+    margin-left: 24px;
+}
 
 .editableSpanContainer {
+    margin: 30px 0 25px 0;
 }
