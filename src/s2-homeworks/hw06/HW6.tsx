@@ -19,7 +19,8 @@ const HW6 = () => {
     }
     const restore = () => {
         // делают студенты
-
+       const state = restoreState<string>('hw6-editable-span-value', 'field is empty')
+        setValue(state)
     }
 
     return (
