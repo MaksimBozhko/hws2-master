@@ -52,9 +52,9 @@ const SuperRadio: React.FC<SuperRadioPropsType> = ({
                       className={finalRadioClassName}
                       type={'radio'}
                       // name, checked, value делают студенты
-                      name={'name'}
+                      name={o.value}
                       checked={o.id == value}
-                      value={o.value}
+                      value={o.id}
                       onChange={onChangeCallback}
                       {...restProps}
                   />
