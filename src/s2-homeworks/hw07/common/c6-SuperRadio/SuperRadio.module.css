@@ -1,5 +1,9 @@
 .radio {
-    display: flex;
+    margin-right: 13px;
+
+}
+input[type='radio'] {
+    color: black;
 }
 
 .radio::before {
@@ -10,7 +14,10 @@
 }
 
 .label {
+    margin-bottom: 22px;
 }
 
 .options {
+    display: flex;
+    flex-direction: column;
 }

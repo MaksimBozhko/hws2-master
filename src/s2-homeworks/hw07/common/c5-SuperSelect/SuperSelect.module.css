@@ -4,8 +4,12 @@
 }
 
 .select:focus {
+
+}
+.select:active {
+color: #00cc22;
 }
 
-
 .option:hover {
+    color: yellow;
 }

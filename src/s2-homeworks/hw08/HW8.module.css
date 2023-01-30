@@ -5,19 +5,33 @@
 }
 
 .users {
+    margin-top: 20px;
+    width: 100%;
 }
 
 .buttonsContainer {
+    text-align: right;
+
 }
 
 .container {
+    max-width: 610px;
+    width: 100%;
 }
 
 .thead {
+    height: 36px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 16px;
+    background-color: rgba(229, 229, 229, 1);
 }
 
 .nameCol {
+    height: 36px;
+    width: 50%;
 }
 
 .ageCol {
+    font-weight: 500;
 }
