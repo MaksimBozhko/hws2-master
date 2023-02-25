@@ -19,5 +19,13 @@ html {
 }
 
 .select {
+    background-color: initial;
+    width: 170px;
+    height: 36px;
+    border-radius: 2px;
+}
 
+[data-theme='3'] .select {
+    border-color: #C2C2C2;
+    color: #C2C2C2;
 }
