@@ -21,8 +21,7 @@ const HW13 = () => {
     const [image, setImage] = useState('')
 
     const send = (x?: boolean | null) => () => {
-        debugger
-        console.log(!!info)
+
         const url =
             x === null
                 ? 'https://xxxxxx.ccc' // имитация запроса на не корректный адрес
@@ -38,9 +37,9 @@ const HW13 = () => {
             .then((res) => {
                 setCode('Код 200!')
                 setImage(success200)
-                setInfo('...всё ок)\n' +
+                setText('...всё ок)\n' +
                     'код 200 - обычно означает что скорее всего всё ок)')
-
+                setInfo('')
 
             })
             .catch((e) => {
