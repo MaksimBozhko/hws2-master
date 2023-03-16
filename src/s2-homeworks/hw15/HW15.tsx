@@ -21,7 +21,7 @@ type TechType = {
     developer: string
 }
 
-const getTechs = (params: {page: number, count: number}) => {
+const getTechs = (params: {page: number, count: number, sort: string}) => {
     return axios
         .get<{ techs: TechType[], totalCount: number }>(
             `https://incubator-personal-page-back.herokuapp.com/api/3.0/homework/test3`,
@@ -42,9 +42,11 @@ const HW15 = () => {
     const [techs, setTechs] = useState<TechType[]>([])
 
     const sendQuery = (params: any) => {
+
         setLoading(true)
         getTechs(params)
             .then((res) => {
+
                 setLoading(false)
                 res && setTechs(res.data.techs)
                 res && setTotalCount(res.data.totalCount)
@@ -54,18 +56,18 @@ const HW15 = () => {
     const onChangePagination = (newPage: number, newCount: number) => {
         setPage(newPage)
         setCount(newCount)
-        sendQuery({page:newPage, count:newCount})
+        sendQuery({page:newPage, count:newCount, sort})
         // setSearchParams({page:newPage, count:newCount})
     }
 
     const onChangeSort = (newSort: string) => {
-
+        console.log(newSort)
         // делает студент
 
          setSort(newSort)
          setPage(1) // при сортировке сбрасывать на 1 страницу
 
-        sendQuery({page: 1, count})
+        sendQuery({page: 1, count, sort: newSort})
         // setSearchParams(
 
         //
@@ -73,7 +75,7 @@ const HW15 = () => {
 
     useEffect(() => {
         const params = Object.fromEntries(searchParams)
-        sendQuery({page: params.page, count: params.count})
+        sendQuery({page: params.page, count: params.count, sort})
         setPage(+params.page || 1)
         setCount(+params.count || 4)
     }, [])
