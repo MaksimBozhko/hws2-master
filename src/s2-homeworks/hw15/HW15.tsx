@@ -45,6 +45,7 @@ const HW15 = () => {
         setLoading(true)
         getTechs(params)
             .then((res) => {
+                setLoading(false)
                 res && setTechs(res.data.techs)
                 res && setTotalCount(res.data.totalCount)
             })
